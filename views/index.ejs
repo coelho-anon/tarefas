@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarefas</title>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+
+    <form action="/adicionar" method="POST">
+        <input type="text" name="tarefa" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <ul>
+        <% tarefas.forEach(function(tarefa, index) { %>
+            <li>
+                <%= tarefa %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
